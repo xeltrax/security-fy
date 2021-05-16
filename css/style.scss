@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Dark-Blue-intro: hsl(217, 28%, 15%);
+$Dark-Blue-main: hsl(218, 28%, 13%);
+$Dark-Blue-footer: hsl(216, 53%, 9%);
+$Dark-Blue-test: hsl(219, 30%, 18%);
+$Cyan-grad: hsl(176, 68%, 64%);
+$Blue-grad: hsl(198, 60%, 50%);
+$Light-Red: hsl(0, 100%, 63%);
+$White-text: hsl(0, 0%, 100%);
+$para-color: hsla(0, 0%, 100%, 0.75);
+
+body {
+  background-color: $Dark-Blue-main;
+}
+
+h1,
+h2,
+h3,
+h5,
+a {
+  color: $White-text;
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  color: $para-color;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  width: 95%;
+  min-height: 12vh;
+  max-height: 12vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  img {
+    width: 150px;
+  }
+}
+
+.nav-links {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-top: 0.4rem;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $para-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.intro {
+  min-height: 100vh;
+  padding-top: 1.2rem;
+
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+    max-width: 30rem;
+    padding: 1rem 2rem;
+  }
+
+  p {
+    max-width: 30rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    background-image: linear-gradient(to right, $Cyan-grad, $Blue-grad);
+    padding: 0.8rem 6rem;
+    border-radius: 2rem;
+    color: white;
+  }
+}
+
+/*Features*/
+.features {
+  width: 65%;
+  min-height: 110vh;
+  padding: 5rem 0rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem 2rem;
+  text-align: center;
+}
+
+.feature1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    padding: 0.5rem 1rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  p {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.feature2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    padding: 0.3rem 1rem;
+  }
+
+  p {
+    padding: 0.3rem 1rem;
+  }
+}
+
+.feature3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    padding: 0.5rem 1rem;
+  }
+
+  p {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/*Productiviy*/
+.productive {
+  width: 90%;
+  min-height: 60vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .prod-img {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.prod-text {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+
+  h2 {
+    font-size: 2rem;
+    max-width: 20rem;
+    // background: pink;
+    line-height: 2.4rem;
+  }
+
+  p {
+    padding: 0.3rem 5rem 1rem 0rem;
+  }
+
+  a {
+    width: 11rem;
+    color: $Cyan-grad;
+    text-decoration: none;
+    border-bottom: 1px solid $Cyan-grad;
+  }
+}
+
+/*Clients*/
+.clients {
+  width: 85%;
+  min-height: 80vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.client1 {
+  position: relative;
+  min-height: 12.8rem;
+  background-color: $Dark-Blue-test;
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+
+  .quotes {
+    position: absolute;
+    top: -20%;
+    left: -5%;
+    z-index: -1;
+  }
+
+  .details {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0rem;
+    justify-content: space-around;
+  }
+
+  img {
+    height: 4rem;
+    width: 4rem;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+/*Sign*/
+.sign {
+  min-height: 40vh;
+  background-image: linear-gradient(
+    180deg,
+    $Dark-Blue-main 50%,
+    $Dark-Blue-footer 50%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  background-color: $Dark-Blue-intro;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px black;
+  text-align: center;
+  padding: 3rem;
+
+  p {
+    padding: 1rem 3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  input {
+    width: 60%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to right, $Cyan-grad, $Blue-grad);
+    border: none;
+    border-radius: 25px;
+    color: $White-text;
+    font-family: "Open-sans", sans-serif;
+  }
+}
+
+/*Footer*/
+footer {
+  min-height: 50vh;
+  background-color: $Dark-Blue-footer;
+  position: relative;
+  padding: 3rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+
+  .address {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 33%;
+    p {
+      padding: 0rem 1.5rem;
+    }
+  }
+
+  .contact {
+    flex-basis: 1;
+    p {
+      &:hover {
+        color: $White-text;
+      }
+    }
+  }
+
+  .res1,
+  .res2 {
+    flex-basis: 1;
+    ul {
+      list-style: none;
+
+      li a {
+        text-decoration: none;
+        color: $para-color;
+        padding: 0.4rem 0rem;
+
+        &:hover {
+          color: $White-text;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    i {
+      border: 1px solid $White-text;
+      border-radius: 50%;
+      padding: 1rem;
+      margin: 0rem 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  @import "mobile";
+}

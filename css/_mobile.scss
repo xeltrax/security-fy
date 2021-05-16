@@ -1,0 +1,87 @@
+body {
+  overflow-x: hidden;
+}
+
+.nav-links {
+  position: fixed;
+  right: 0px;
+  height: 92vh;
+  top: 12vh;
+  background-color: $Dark-Blue-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transform: translateX(100%);
+  padding-top: 0rem;
+  transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+  opacity: 0;
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+/*Features*/
+.features {
+  width: 100%;
+  padding-top: 3rem;
+  padding-left: 0;
+  padding-right: 0;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+/*Productive*/
+.prod-text {
+  padding: 0rem 0.3rem;
+  flex-grow: 1;
+  p {
+    padding: 0.3rem;
+  }
+}
+
+/*Clients*/
+.clients {
+  width: 90%;
+  padding: 6rem 0rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.sign-in {
+  width: 95%;
+  padding: 2rem 0.2rem;
+
+  input {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 90%;
+  }
+}
+
+.footer-info {
+  flex-direction: column;
+
+  .contact {
+    padding: 1.6rem 0rem;
+  }
+  .res1 {
+    padding: 1.5rem 0rem;
+  }
+  .res2 {
+    padding: 0.5rem 0rem;
+  }
+  .social {
+    padding: 1.8rem 0rem;
+  }
+}
